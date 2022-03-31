@@ -4,20 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
     android:background="@color/m_black"
-    >
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="5dp"
+            android:src="@drawable/broom_stick" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/shadows_into_light"
+            android:gravity="center"
+            android:text="Fisci"
+            android:textColor="@color/ac_9"
+            android:layout_marginHorizontal="5dp"
+            android:textSize="48sp" />
+
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/tvInput"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:textColor="@color/ac_4"
+        android:layout_height="200dp"
         android:ems="10"
         android:gravity="right|center_vertical|bottom"
         android:maxLength="12"
         android:padding="10dp"
+        android:textColor="@color/ac_4"
         android:textSize="48sp" />
 
     <LinearLayout
@@ -33,56 +55,56 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/ac_4"
-            android:elevation="10dp"
             android:background="@drawable/button_bg_sci"
-            android:tag="@string/scientific"
-            android:text="sin" />
+            android:elevation="10dp"
+            android:onClick="OnUniScientific"
+            android:tag="sin"
+            android:text="sin"
+            android:textColor="@color/ac_6" />
 
         <Button
             android:id="@+id/btnSeven"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
-            android:textColor="@color/ac_4"
-            android:elevation="10dp"
             android:background="@drawable/button_bg"
+            android:elevation="10dp"
+            android:onClick="onDigit"
+            android:tag="7"
             android:text="7"
-            android:tag="7"/>
+            android:textColor="@color/ac_4" />
 
         <Button
             android:id="@+id/btnEight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/ac_4"
             android:background="@drawable/button_bg"
             android:onClick="onDigit"
+            android:tag="8"
             android:text="8"
-            android:tag="8"/>
+            android:textColor="@color/ac_4" />
 
         <Button
             android:id="@+id/btnNine"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
-            android:textColor="@color/ac_4"
             android:background="@drawable/button_bg"
+            android:onClick="onDigit"
+            android:tag="9"
             android:text="9"
-            android:tag="9"/>
+            android:textColor="@color/ac_4" />
+
         <Button
             android:id="@+id/btnClear"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onClear"
-            android:textColor="@color/ac_4"
             android:background="@drawable/button_bg_clr"
-            android:text="CLR" />
-
-
+            android:onClick="onClear"
+            android:text="CLR"
+            android:textColor="@color/ac_3" />
 
 
     </LinearLayout>
@@ -99,55 +121,56 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/ac_4"
-            android:elevation="10dp"
             android:background="@drawable/button_bg_sci"
-            android:tag="@string/scientific"
-            android:text="Cos" />
+            android:elevation="10dp"
+            android:onClick="OnUniScientific"
+            android:tag="cos"
+            android:text="Cos"
+            android:textColor="@color/ac_6" />
+
         <Button
             android:id="@+id/btnFour"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
-            android:textColor="@color/ac_4"
             android:background="@drawable/button_bg"
-            android:text="4"
+            android:onClick="onDigit"
             android:tag="4"
-            />
+            android:text="4"
+            android:textColor="@color/ac_4" />
 
         <Button
             android:id="@+id/btnFive"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
-            android:textColor="@color/ac_4"
             android:background="@drawable/button_bg"
+            android:onClick="onDigit"
+            android:tag="5"
             android:text="5"
-            android:tag="5"/>
+            android:textColor="@color/ac_4" />
 
         <Button
             android:id="@+id/btnSix"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/ac_4"
             android:background="@drawable/button_bg"
             android:onClick="onDigit"
+            android:tag="6"
             android:text="6"
-            android:tag="6"/>
+            android:textColor="@color/ac_4" />
 
         <Button
             android:id="@+id/btnMultiply"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onOperator"
-            android:textColor="@color/ac_4"
             android:background="@drawable/button_bg_op"
+            android:onClick="onOperator"
+            android:tag="*"
             android:text="*"
-            android:tag="*"/>
+            android:textColor="@color/ac_7" />
 
     </LinearLayout>
 
@@ -163,54 +186,56 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/ac_4"
-            android:elevation="10dp"
             android:background="@drawable/button_bg_sci"
-            android:tag="@string/scientific"
-            android:text="tan" />
+            android:elevation="10dp"
+            android:onClick="OnUniScientific"
+            android:tag="tan"
+            android:text="tan"
+            android:textColor="@color/ac_6" />
+
         <Button
             android:id="@+id/btnOne"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
-            android:textColor="@color/ac_4"
             android:background="@drawable/button_bg"
+            android:onClick="onDigit"
+            android:tag="1"
             android:text="1"
-            android:tag="1"/>
+            android:textColor="@color/ac_4" />
 
         <Button
             android:id="@+id/btnTwo"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/ac_4"
             android:background="@drawable/button_bg"
             android:onClick="onDigit"
+            android:tag="2"
             android:text="2"
-            android:tag="2"/>
+            android:textColor="@color/ac_4" />
 
         <Button
             android:id="@+id/btnThree"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/button_bg"
             android:onClick="onDigit"
             android:tag="3"
-            android:textColor="@color/ac_4"
-            android:background="@drawable/button_bg"
-            android:text="3" />
+            android:text="3"
+            android:textColor="@color/ac_4" />
 
         <Button
             android:id="@+id/btnSubtract"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/ac_4"
             android:background="@drawable/button_bg_op"
             android:onClick="onOperator"
+            android:tag="-"
             android:text="-"
-            android:tag="-"/>
+            android:textColor="@color/ac_7" />
     </LinearLayout>
 
     <LinearLayout
@@ -219,60 +244,62 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <Button
             android:id="@+id/btnPow"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/ac_4"
-            android:elevation="10dp"
             android:background="@drawable/button_bg_sci"
+            android:elevation="10dp"
             android:tag="@string/scientific"
-            android:text="pow" />
+            android:text="pow"
+            android:textColor="@color/ac_6" />
+
+
+        <Button
+            android:id="@+id/btnDivide"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg_op"
+            android:onClick="onOperator"
+            android:tag="/"
+            android:text="/"
+            android:textColor="@color/ac_7" />
+
         <Button
             android:id="@+id/btnZero"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
-            android:textColor="@color/ac_4"
             android:background="@drawable/button_bg"
+            android:onClick="onDigit"
+            android:tag="0"
             android:text="0"
-            android:tag="0"/>
-
-        <Button
-            android:id="@+id/btnDivide"
-            android:layout_width="0dp"
-            android:textColor="@color/ac_4"
-            android:background="@drawable/button_bg_op"            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="onOperator"
-            android:tag="/"
-            android:text="/" />
-
-
+            android:textColor="@color/ac_4" />
 
         <Button
             android:id="@+id/btnMod"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onOperator"
-            android:textColor="@color/ac_4"
             android:background="@drawable/button_bg_op"
+            android:onClick="onOperator"
+            android:tag="%"
             android:text="%"
-            android:tag="%"/>
+            android:textColor="@color/ac_7" />
 
         <Button
             android:id="@+id/btnAdd"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onOperator"
-            android:textColor="@color/ac_4"
-            android:tag="+"
             android:background="@drawable/button_bg_op"
-            android:text="+" />
+            android:onClick="onOperator"
+            android:tag="+"
+            android:text="+"
+            android:textColor="@color/ac_7" />
 
     </LinearLayout>
 
@@ -282,56 +309,66 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <Button
             android:id="@+id/btnInv"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/ac_4"
-            android:elevation="10dp"
             android:background="@drawable/button_bg_sci"
-            android:tag="@string/scientific"
-            android:text="Inv" />
+            android:elevation="10dp"
+            android:onClick="OnUniScientific"
+            android:tag="inv"
+            android:text="Inv"
+            android:textColor="@color/ac_6" />
+
         <Button
             android:id="@+id/btnExp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/ac_4"
-            android:elevation="10dp"
             android:background="@drawable/button_bg_sci"
-            android:tag="@string/scientific"
-            android:text="exp" />
+            android:elevation="10dp"
+            android:onClick="OnUniScientific"
+            android:tag="exp"
+            android:text="exp"
+            android:textColor="@color/ac_6" />
+
         <Button
             android:id="@+id/btnSqu"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/ac_4"
-            android:elevation="10dp"
             android:background="@drawable/button_bg_sci"
-            android:tag="@string/scientific"
-            android:text="Sqrt" />
+            android:elevation="10dp"
+            android:onClick="OnUniScientific"
+            android:tag="sqrt"
+            android:text="Sqrt"
+            android:textColor="@color/ac_6" />
+
         <Button
             android:id="@+id/btnLog"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/ac_4"
-            android:elevation="10dp"
             android:background="@drawable/button_bg_sci"
-            android:tag="@string/scientific"
-            android:text="Log" />
+            android:elevation="10dp"
+            android:onClick="OnUniScientific"
+            android:tag="log"
+            android:text="Log"
+            android:textColor="@color/ac_6" />
+
         <Button
             android:id="@+id/btnLan"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/ac_4"
-            android:elevation="10dp"
             android:background="@drawable/button_bg_sci"
-            android:tag="@string/scientific"
-            android:text="lan" />
+            android:elevation="10dp"
+            android:onClick="OnUniScientific"
+            android:tag="lan"
+            android:text="lan"
+            android:textColor="@color/ac_6" />
 
     </LinearLayout>
 
@@ -339,18 +376,18 @@
         android:id="@+id/llFive"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_marginTop="10dp"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnEqual"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:onClick="onEqual"
-            android:textColor="@color/ac_4"
             android:background="@drawable/button_bg_eq"
-            android:text="=" />
+            android:onClick="onEqual"
+            android:text="="
+            android:textColor="@color/ac_4" />
     </LinearLayout>
 
 </LinearLayout>
