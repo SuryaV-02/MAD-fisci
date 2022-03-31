@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
     var isTextLocked : Boolean = false
     var isOperatorPresent : Boolean = false
     var currentOperator : String = ""
+    var isOutputProduced : Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,15 +18,27 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onDigit(view: android.view.View) {
-        if(!isTextLocked){
-            var tvInput = findViewById<TextView>(R.id.tvInput)
+        if(isOutputProduced){
+            onClear()
+        }
+        if(!isTextLocked ){
             var digit = view.tag.toString()
+            var tvInput = findViewById<TextView>(R.id.tvInput)
             tvInput.text = tvInput.text.toString() + digit
         }
     }
     fun onClear(view: android.view.View) {
         isTextLocked = false
         isOperatorPresent = false
+        isOutputProduced = false
+        currentOperator = ""
+        var tvInput = findViewById<TextView>(R.id.tvInput)
+        tvInput.text = ""
+    }
+    fun onClear() {
+        isTextLocked = false
+        isOperatorPresent = false
+        isOutputProduced = false
         currentOperator = ""
         var tvInput = findViewById<TextView>(R.id.tvInput)
         tvInput.text = ""
@@ -41,14 +54,16 @@ class MainActivity : AppCompatActivity() {
     fun onEqual(view: android.view.View) {
         var tvInput = findViewById<TextView>(R.id.tvInput)
         var query : List<String> = tvInput.text.toString().split(currentOperator)
-
-        val num1 = query[0].toInt()
-        val num2 = query[1].toInt()
-        Log.i("SKHST_8451","$num1 $num2")
-        var result = computeResult(num1,num2)
-
-        tvInput.text = result.toString()
-
+        if(query.size == 2){
+            val num1 = query[0].toInt()
+            val num2 = query[1].toInt()
+            Log.i("SKHST_8451","$num1 $num2")
+            var result = computeResult(num1,num2)
+            tvInput.text = result.toString()
+            isOperatorPresent = false
+            currentOperator = ""
+            isOutputProduced = true
+        }
     }
 
     private fun computeResult(num1: Int, num2: Int): Any {
