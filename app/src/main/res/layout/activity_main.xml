@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="horizontal"
+        android:background="@color/ac_10"
         android:gravity="center">
         <ImageView
             android:layout_width="60dp"
@@ -38,6 +39,7 @@
         android:ems="10"
         android:gravity="right|center_vertical|bottom"
         android:maxLength="12"
+        android:background="@color/ac_10"
         android:padding="10dp"
         android:textColor="@color/ac_4"
         android:textSize="48sp" />
